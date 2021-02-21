@@ -1,12 +1,13 @@
-Rails.application.routes.draw do
  
   Rails.application.routes.draw do
+  
+
     devise_for :users, controllers: {
       registration: 'users/registrations'
     }
-  end
+    resources :stories
+    get 'home/mystories'
 
-  resources :stories
-  root to:'stories#index'
+  root to: 'stories#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -29,7 +29,7 @@ class StoriesController < ApplicationController
 
     @story.user_id = current_user.id
 
-    
+
 
     respond_to do |format|
       if @story.save
@@ -41,6 +41,8 @@ class StoriesController < ApplicationController
       end
     end
   end
+
+ 
 
   # PATCH/PUT /stories/1
   # PATCH/PUT /stories/1.json
